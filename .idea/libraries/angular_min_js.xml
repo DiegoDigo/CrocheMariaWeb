@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="angular.min.js" type="javaScript">
+    <properties>
+      <option name="frameworkName" value="jQuery" />
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/bower_components/angular-materialize/src/angular-materialize.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/bower_components/angular-route/angular-route.min.js" />
+      <root url="file://$PROJECT_DIR$/bower_components/angular-materialize/src/angular-materialize.js" />
+      <root url="file://$PROJECT_DIR$/bower_components/jquery/dist/jquery.min.js" />
+      <root url="file://$PROJECT_DIR$/bower_components/angular/angular.min.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
