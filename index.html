@@ -1,18 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="crocheMaria">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CrocheMaria</title>
   </head>
   <body>
-    <nav class="blue">
-      <div class="container">
-        <a class="brand-logo">TEste</a>
-      </div>
-    </nav>
-    <div class="col s12 center">
-        <h1>Teste</h1>
+  <nav class="blue">
+    <div class="container">
+        <a class="brand-logo">Croche Maria</a>
     </div>
+  </nav>
+  <div ng-view></div>
+    <!-- Dependencias -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
+    <script src="bower_components/angular-materialize/src/angular-materialize.js"></script>
+    <!-- Modulos -->
+    <script src="js/apps/app.js"></script>
+    <script src="js/apps/configs/appConfig.js"></script>
+    <script src="js/controllers/home/homeController.js"></script>
   </body>
 </html>
