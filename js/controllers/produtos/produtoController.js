@@ -1,4 +1,18 @@
-angular.module("crocheMaria").controller("produtoController", function(){
+'use strict'
+angular.module("crocheMaria").controller("produtoController", function(produtoService){
     var vim = this;
-    vim.testes = [1,2,3,4,5,6,7,8,9];
+    vim.teste = [];
+
+    var testeApi = function(){
+      produtoService.teste().success(function(result){
+        vim.teste = result;
+      });
+    };
+
+    var init = function(){
+      testeApi();
+    };
+
+    init();
+
 });

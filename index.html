@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="assests/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>CrocheMaria</title>
   </head>
@@ -12,7 +13,7 @@
         <a href="#/"class="brand-logo">Croche Maria</a>
     </div>
   </nav>
-  <div ng-view></div>
+  <div class="container espasamento" ng-view></div>
     <!-- Dependencias -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
@@ -23,6 +24,8 @@
     <script src="js/apps/app.js"></script>
     <script src="js/apps/configs/appConfig.js"></script>
     <script src="js/controllers/home/homeController.js"></script>
+
     <script src="js/controllers/produtos/produtoController.js"></script>
+    <script src="js/controllers/produtos/produtoService.js"></script>
   </body>
 </html>

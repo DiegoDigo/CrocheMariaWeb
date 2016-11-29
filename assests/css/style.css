@@ -1,0 +1,13 @@
+body{
+  background-color: #eceff1;
+}
+
+div.espasamento {
+  margin-top: 60px;
+}
+nav {
+  height: 75px;
+}
+nav a{
+  margin-top: 6px;
+}
