@@ -1,25 +1,37 @@
-<div class="slider" slider height='500' transition='400'>
+<div class="slider" slider height='400' transition='400'>
   <ul class="slides">
     <li ng-repeat="num in home.numeros">
        <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
-       <div class="caption right-align">
+       <div class="caption center">
          <h3>{{num}}</h3>
          <h5 class="light grey-text text-lighten-3">Descricão</h5>
        </div>
      </li>
    </ul>
 </div>
-<div style="height:450px;">
+<div>
   <div class="row">
     <div class="col s12 m6">
-        <p>{{home.apresentacao}}</p>
+      <div class="card">
+        <div class="card-content">
+            <p>{{home.apresentacao}}</p>
+            </br>
+            <div class="center">
+                <button class="btn">Acessar</button>
+            </div>
+        </div>
+      </div>
     </div>
     <div class="col s12 m6">
-        <p>{{home.apresentacao}}</p>
+      <div class="card">
+        <div class="card-content">
+            <p>{{home.apresentacao}}</p>
+          </br>
+            <div class="center">
+                <button class="btn">Acessar</button>
+            </div>
+        </div>
+      </div>
     </div>
-    </div>    
-    </div>
-
-
-
+  </div>
 </div>

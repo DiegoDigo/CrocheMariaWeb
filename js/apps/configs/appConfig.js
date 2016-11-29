@@ -1,4 +1,7 @@
 angular.module("crocheMaria").config(function($routeProvider,$locationProvider){
+
+      // $locationProvider.html5Mode(true);
+
       $routeProvider
       .when('/',{
           templateUrl : 'views/home.html',
@@ -10,7 +13,15 @@ angular.module("crocheMaria").config(function($routeProvider,$locationProvider){
           templateUrl : 'views/produtos.html',
           controller : 'produtoController',
           controllerAs : 'produto',
-      });
+      })
+      .when('/produtos/:id',{
+          templateUrl : 'views/detalheprodutos.html',
+          controller : 'produtoDetalheController',
+          controllerAs : 'detalhe',
+      })
+      .otherwise({
+          redirectTo: '/'
+        });
 
-      // $locationProvider.html5Mode(true);
+
 });

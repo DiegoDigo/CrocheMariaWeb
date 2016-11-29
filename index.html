@@ -7,12 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>CrocheMaria</title>
   </head>
-  <body>
   <nav class="blue">
     <div class="container">
-        <a href="#/"class="brand-logo">Croche Maria</a>
+      <div class="nav-wrapper">
+        <a href="#/" class="brand-logo">Croche Maria</a>
+        <a href="#" class="button-collapse" data-activates="nav-mobile" data-sidenav="left" data-menuwidth="500" data-closeonclick="true"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#/produtos">Produtos</a></li>
+        </ul>
+        <ul class="side-nav" id="nav-mobile">
+          <li><a href="#/produtos">Produtos</a></li>
+        </ul>
+      </div>
     </div>
-  </nav>
+    </nav>
+
+
+
+
   <div class="container espasamento" ng-view></div>
     <!-- Dependencias -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -27,5 +39,6 @@
 
     <script src="js/controllers/produtos/produtoController.js"></script>
     <script src="js/controllers/produtos/produtoService.js"></script>
+    <script src="js/controllers/produtos/detalheProdutoController.js"></script>
   </body>
 </html>
