@@ -19,6 +19,11 @@ angular.module("crocheMaria").config(function($routeProvider,$locationProvider){
           controller : 'produtoDetalheController',
           controllerAs : 'detalhe',
       })
+      .when('/perfil',{
+          templateUrl : 'views/perfil.html',
+          controller : 'perfilController',
+          controllerAs : 'perfil',
+      })
       .otherwise({
           redirectTo: '/'
         });
