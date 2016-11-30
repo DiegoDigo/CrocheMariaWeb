@@ -5,7 +5,7 @@ angular.module("crocheMaria").service("produtoService", function($http){
     return $http.get("http://127.0.0.1:8080/v1/gelinho/sabores/");
   };
   var _get = function(id){
-    return $http.get("http://127.0.0.1:8080/v1/gelinho/sabor/"+id);
+    return $http.get("http://127.0.0.1:8080/v1/gelinho/sabor/"+id+"/");
   };
 
   return {

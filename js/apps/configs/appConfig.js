@@ -15,7 +15,7 @@ angular.module("crocheMaria").config(function($routeProvider,$locationProvider){
           controllerAs : 'produto',
       })
       .when('/produtos/:id',{
-          templateUrl : 'views/detalheprodutos.html',
+          templateUrl : 'views/detalheproduto.html',
           controller : 'produtoDetalheController',
           controllerAs : 'detalhe',
       })

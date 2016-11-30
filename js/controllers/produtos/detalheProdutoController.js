@@ -1,11 +1,12 @@
 'use strict'
-angular.module("crocheMaria").controller("produtoDetalheController", function($routeParams){
+angular.module("crocheMaria").controller("produtoDetalheController", function(produtoService , $routeParams){
     var vim = this;
-    vim.id = $routeParams.id;
+    var id = $routeParams.id;
     vim.teste = [];
 
+
     var testeApi = function(){
-      produtoService.get(vim.id).success(function(result){
+      produtoService.get(id).success(function(result){
         vim.teste = result;
       });
     };
