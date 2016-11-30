@@ -8,6 +8,10 @@ div.espasamento {
 nav {
   height: 75px;
 }
-nav a{
+nav a , i{
   margin-top: 6px;
+}
+
+footer div.rodape{
+  padding: 20px;
 }

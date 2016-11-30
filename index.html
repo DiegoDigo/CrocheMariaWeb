@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css">
     <link rel="stylesheet" href="assests/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>CrocheMaria</title>
   </head>
@@ -14,18 +15,32 @@
         <a href="#" class="button-collapse" data-activates="nav-mobile" data-sidenav="left" data-menuwidth="500" data-closeonclick="true"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="#/produtos">Produtos</a></li>
+          <li><a href="#/produtos"></a></li>
+          <li><i class="material-icons " href='javascript:void(0);' data-activates='demoDropdown' dropdown>more_vert</i></li>
+        </ul>
+        <ul id='demoDropdown' class='dropdown-content'>
+          <li><a href="#/produtos">Perfil</a></li>
+          <li><a href="#/">Sair</a></li>
         </ul>
         <ul class="side-nav" id="nav-mobile">
           <li><a href="#/produtos">Produtos</a></li>
+          <li><a href="">Perfil</a></li>
         </ul>
       </div>
     </div>
     </nav>
+    <div class="container espasamento" ng-view></div>
+    <footer class="page-footer blue">
+      <div class="footer-copyright">
+            <div class="container">
+                Todos os direitos reservado a Croche Maria <small></small>
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+    </footer>
 
 
 
-
-  <div class="container espasamento" ng-view></div>
     <!-- Dependencias -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
