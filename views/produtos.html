@@ -2,9 +2,9 @@
   <h2>{{produto.title}}</h2>
 </div>
 
-<div class="card center">
-  <div class="card-content msg">
-      <h2>{{produto.msg}}</h2>
+<div ng-if="produto.msg" class="card center">
+  <div class="card-content">
+      <h2 class ="msg">{{produto.msg}}</h2>
   </div>
 </div>
 

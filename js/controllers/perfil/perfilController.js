@@ -2,5 +2,5 @@
 
 angular.module("crocheMaria").controller("perfilController",function(){
   var vim = this;
-  vim.teste = "functionando";
+  vim.user = "Diego Delmiro";
 });

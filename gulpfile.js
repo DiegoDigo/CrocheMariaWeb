@@ -30,7 +30,7 @@ gulp.task('clean', function() {
                    .pipe(clean());
 });
 
-// Concatenação de arquivos (js, css e etc...)
+// ConcatenaÃ§Ã£o de arquivos (js, css e etc...)
 gulp.task('build-js', function() {
   gulp.src('dist/js/**/*.js')
       .pipe(concat('all.js')) // generate a new file named
