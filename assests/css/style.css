@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Ultra');
+@import url('https://fonts.googleapis.com/css?family=Quando');
+
 body{
   background-color: #eceff1;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
+
+main {
+  flex: 1 0 auto;
+}
+
 
 div.espasamento {
   margin-top: 60px;
@@ -12,6 +24,35 @@ nav a , i{
   margin-top: 6px;
 }
 
-footer div.rodape{
-  padding: 20px;
+nav a.brand-logo {
+  font-family: 'Pacifico', cursive;
+}
+
+div.card-content p{
+  font-family: 'Quando', serif;
+}
+div.card-content h2{
+  color: red;
+}
+
+.title{
+  font-family: 'Ultra', serif;
+}
+
+.title_rodape{
+  font-family: 'Pacifico', cursive;
+}
+
+
+@media (max-width:700px){
+  nav a.brand-logo {
+    font-size: 23px;
+  }
+  footer div.container {
+    font-size: 12px;
+    text-align: center;
+  }
+  .title{
+    font-size: 1px;
+  }
 }

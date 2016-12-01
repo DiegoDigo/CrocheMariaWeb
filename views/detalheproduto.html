@@ -1,3 +1,16 @@
-<ul>
-  <li ng-repeat="teste in detalhe.teste">{{teste}}</li>
-</ul>
+<div carousel time-constant='500' no-wrap='true' full-width>
+    <a class="carousel-item" href="javascript:void(0);"><img ng-src="{{detalhe.teste.imagen}}"></a>
+    <a class="carousel-item" href="javascript:void(0);"><img ng-src="{{detalhe.teste.imagen}}"></a>
+    <a class="carousel-item" href="javascript:void(0);"><img ng-src="{{detalhe.teste.imagen}}"></a>
+    <a class="carousel-item" href="javascript:void(0);"><img ng-src="{{detalhe.teste.imagen}}"></a>
+</div>
+
+<div class="card">
+  <div class="card-content">
+    <div class="card-title">
+      <p><h3>{{detalhe.teste.sabor}}</h3></p>
+    </div>
+    <p><h5>{{detalhe.teste.tipoGelinho.tipo}}</h5></p>
+    <p>{{detalhe.teste.valor_uni}}</p>
+  </div>
+</div>

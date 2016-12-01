@@ -4,10 +4,10 @@ angular.module("crocheMaria").controller("produtoDetalheController", function(pr
     var id = $routeParams.id;
     vim.teste = [];
 
-
     var testeApi = function(){
       produtoService.get(id).success(function(result){
         vim.teste = result;
+        console.log(vim.teste);
       });
     };
 
