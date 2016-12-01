@@ -1,8 +1,22 @@
-<div carousel time-constant='500' no-wrap='true' full-width>
+<div carousel time-constant='500' no-wrap='true' full-width ng-if = "detalhe.teste.imagen">
     <a class="carousel-item" href="javascript:void(0);"><img ng-src="{{detalhe.teste.imagen}}"></a>
     <a class="carousel-item" href="javascript:void(0);"><img ng-src="{{detalhe.teste.imagen}}"></a>
     <a class="carousel-item" href="javascript:void(0);"><img ng-src="{{detalhe.teste.imagen}}"></a>
     <a class="carousel-item" href="javascript:void(0);"><img ng-src="{{detalhe.teste.imagen}}"></a>
+</div>
+
+<div carousel time-constant='500' no-wrap='true' full-width ng-if = "!detalhe.teste.imagen">
+    <a class="carousel-item" href="javascript:void(0);"><img src="assests/img/sem-imagem.jpg"></a>
+    <a class="carousel-item" href="javascript:void(0);"><img src="assests/img/sem-imagem.jpg"></a>
+    <a class="carousel-item" href="javascript:void(0);"><img src="assests/img/sem-imagem.jpg"></a>
+    <a class="carousel-item" href="javascript:void(0);"><img src="assests/img/sem-imagem.jpg"></a>
+</div>
+
+
+<div ng-if="produto.msg" class="card center">
+  <div class="card-content">
+      <h2 class ="msg">{{detalhe.msg}}</h2>
+  </div>
 </div>
 
 <div class="card">

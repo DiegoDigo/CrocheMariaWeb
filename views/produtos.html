@@ -12,7 +12,8 @@
   <div class="col s12 m4" ng-repeat="gelinhos in produto.teste">
     <div class="card medium z-depth-4" >
         <div class="card-image">
-            <img ng-src="{{gelinhos.imagen}}" class="responsive-img">
+            <img ng-if = "gelinhos.imagen" ng-src="{{gelinhos.imagen}}" class="responsive-img">
+            <img ng-if = "!gelinhos.imagen" src="assests/img/sem-imagem.jpg" class="responsive-img">
             <span class="card-title">{{gelinhos.sabor}}</span>
         </div>
         <div class="card-content">
