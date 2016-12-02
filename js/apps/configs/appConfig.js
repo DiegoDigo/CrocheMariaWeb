@@ -1,32 +1,31 @@
-angular.module("crocheMaria").config(function($routeProvider,$locationProvider){
+angular.module("crocheMaria").config(Config);
 
-      // $locationProvider.html5Mode(true);
+Config.$inject = ['$routeProvider','$locationProvider'];
 
-      $routeProvider
-      .when('/',{
-          templateUrl : 'views/home.html',
-          controller : 'homeController',
-          controllerAs :'home',
-      })
+function Config($routeProvider,$locationProvider){
+  $routeProvider
+  .when('/',{
+      templateUrl : 'views/home.html',
+      controller : 'homeController',
+      controllerAs :'home',
+  })
 
-      .when('/produtos',{
-          templateUrl : 'views/produtos.html',
-          controller : 'produtoController',
-          controllerAs : 'produto',
-      })
-      .when('/produtos/:id',{
-          templateUrl : 'views/detalheproduto.html',
-          controller : 'produtoDetalheController',
-          controllerAs : 'detalhe',
-      })
-      .when('/perfil',{
-          templateUrl : 'views/perfil.html',
-          controller : 'perfilController',
-          controllerAs : 'perfil',
-      })
-      .otherwise({
-          redirectTo: '/'
-        });
-
-
-});
+  .when('/produtos',{
+      templateUrl : 'views/produtos.html',
+      controller : 'produtoController',
+      controllerAs : 'produto',
+  })
+  .when('/produtos/:id',{
+      templateUrl : 'views/detalheproduto.html',
+      controller : 'produtoDetalheController',
+      controllerAs : 'detalhe',
+  })
+  .when('/perfil',{
+      templateUrl : 'views/perfil.html',
+      controller : 'perfilController',
+      controllerAs : 'perfil',
+  })
+  .otherwise({
+      redirectTo: '/'
+    });
+}

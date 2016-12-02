@@ -1,21 +1,24 @@
 'use strict'
-angular.module("crocheMaria").controller("produtoDetalheController", function(produtoFactory , $routeParams){
-    var vim = this;
-    var id = $routeParams.id;
-    vim.teste = [];
+angular.module("crocheMaria").controller("produtoDetalheController", DetalheProduto);
 
-    var testeApi = function(){
-      produtoFactory.buscar(id).then(function(response, status){
-          vim.teste = response.data;
-      }, function(error){
-          vim.msg = "Não temos produtos cadastrado no momento";
-      });
-    };
+DetalheProduto.$inject = ['produtoFactory' , '$routeParams'];
 
-    var init = function(){
-      testeApi();
-    };
+function DetalheProduto(produtoFactory , $routeParams){
+  var vim = this;
+  var id = $routeParams.id;
+  vim.teste = [];
 
-    init();
+  var testeApi = function(){
+    produtoFactory.buscar(id).then(function(response, status){
+        vim.teste = response.data;
+    }, function(error){
+        vim.msg = "Não temos produtos cadastrado no momento";
+    });
+  };
 
-});
+  var init = function(){
+    testeApi();
+  };
+
+  init();
+}

@@ -1,25 +1,28 @@
 'use strict'
-angular.module("crocheMaria").controller("produtoController", function(produtoFactory){
-    var vim = this;
-    vim.teste = [];
-    vim.title = "Nossos Produtos";
-    vim.msg ="";
+angular.module("crocheMaria").controller("produtoController", Produto);
 
-    var testeApi = function(){
-      produtoFactory.listar().then(function(teste){
-        vim.teste = teste;
-        if(vim.teste.length === 0){
-          vim.msg = "Não temos produtos cadastrado no momento";
-        }
-      },function(error){
-        vim.msg = "Ocorreu o erro " + error.message ;
-      });
-    };
+Produto.$inject = ['produtoFactory'];
 
-    var init = function(){
-      testeApi();
-    };
+function Produto(produtoFactory){
+  var vim = this;
+  vim.teste = [];
+  vim.title = "Nossos Produtos";
+  vim.msg ="";
 
-    init();
+  var testeApi = function(){
+    produtoFactory.listar().then(function(teste){
+      vim.teste = teste;
+      if(vim.teste.length === 0){
+        vim.msg = "Não temos produtos cadastrado no momento";
+      }
+    },function(error){
+      vim.msg = "Ocorreu o erro " + error.message ;
+    });
+  };
 
-});
+  var init = function(){
+    testeApi();
+  };
+
+  init();
+}
