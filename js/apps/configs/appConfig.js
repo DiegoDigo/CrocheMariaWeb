@@ -3,6 +3,12 @@ angular.module("crocheMaria").config(Config);
 Config.$inject = ['$routeProvider','$locationProvider'];
 
 function Config($routeProvider,$locationProvider){
+  // $locationProvider.html5Mode({
+  //    enabled: true,
+  //    requireBase: false
+  //  });
+
+
   $routeProvider
   .when('/',{
       templateUrl : 'views/home.html',

@@ -4,7 +4,7 @@ angular.module("crocheMaria").factory("produtoFactory", ProdutoFactory);
 ProdutoFactory.$inject = ['$http','config','$q'];
 
 function ProdutoFactory($http,config , $q){
-  
+
   var url = config.host + "gelinho/";
 
   return {
