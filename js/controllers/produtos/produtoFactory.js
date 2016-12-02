@@ -1,16 +1,24 @@
-angular.module("crocheMaria").factory("produtoFactory", function($http, config){
-      var url = config.host ;
-      var dataFactory = {};
+'use strict'
+angular.module("crocheMaria").factory("produtoFactory", function($http, config, $q){
+      var url = config.host + "gelinho/";
 
-      dataFactory.getProdutos = function(){
-        return $http.get(url + "gelinho/sabores/");
+      return {
+          listar: function(){
+            var promessa = $q.defer();
+            $http.get(url +'sabores/').then(function(result){
+              var dados = [];
+              angular.forEach(result.data , function(dado){
+                dados.push(dado);
+              });
+              promessa.resolve(dados);
+            });
+            return promessa.promise;
+          },
+
+          buscar : function(id){
+            return $http.get(url +"sabor/"+id+"/");
+          }
       }
-      dataFactory.getProduto = function(id){
-        return $http.get(url + "gelinho/sabor/"+id+"/");
-      }
-
-      return dataFactory;
-
 
 
 });

@@ -5,12 +5,8 @@ angular.module("crocheMaria").controller("produtoDetalheController", function(pr
     vim.teste = [];
 
     var testeApi = function(){
-      produtoFactory.getProduto(id).then(function(response, status){
-        if(status === 404){
-            vim.msg = "Nao temos produto cadastrado como esse campo " + id;
-        }else{
+      produtoFactory.buscar(id).then(function(response, status){
           vim.teste = response.data;
-        }
       }, function(error){
           vim.msg = "Não temos produtos cadastrado no momento";
       });
