@@ -1,30 +1,63 @@
-<div carousel time-constant='500' no-wrap='true' full-width ng-if = "detalhe.teste.imagen">
-    <a class="carousel-item" href="javascript:void(0);"><img ng-src="{{detalhe.teste.imagen}}"></a>
-    <a class="carousel-item" href="javascript:void(0);"><img ng-src="{{detalhe.teste.imagen}}"></a>
-    <a class="carousel-item" href="javascript:void(0);"><img ng-src="{{detalhe.teste.imagen}}"></a>
-    <a class="carousel-item" href="javascript:void(0);"><img ng-src="{{detalhe.teste.imagen}}"></a>
-</div>
-
-<div carousel time-constant='500' no-wrap='true' full-width ng-if = "!detalhe.teste.imagen">
-    <a class="carousel-item" href="javascript:void(0);"><img src="assests/img/sem-imagem.jpg"></a>
-    <a class="carousel-item" href="javascript:void(0);"><img src="assests/img/sem-imagem.jpg"></a>
-    <a class="carousel-item" href="javascript:void(0);"><img src="assests/img/sem-imagem.jpg"></a>
-    <a class="carousel-item" href="javascript:void(0);"><img src="assests/img/sem-imagem.jpg"></a>
-</div>
-
-
-<div ng-if="produto.msg" class="card center">
-  <div class="card-content">
-      <h2 class ="msg">{{detalhe.msg}}</h2>
-  </div>
-</div>
-
 <div class="card">
   <div class="card-content">
     <div class="card-title">
-      <p><h3>{{detalhe.teste.sabor}}</h3></p>
+      <p><h3 class="center title">{{detalhe.teste.sabor}}</h3></p>
     </div>
     <p><h5>{{detalhe.teste.tipoGelinho.tipo}}</h5></p>
     <p>{{detalhe.teste.valor_uni}}</p>
+    <div class="space">
+        <button type="button" class="btn">Compar</button>
+        <div class="right caixa"><a class="curtir"><i class="material-icons">queue</i></a></div>
+        <div class="right caixa"><a class="curtir"><i  ng-click="detalhe.curti()" class="material-icons">thumb_up</i></a><span ng-if="detalhe.curtida">{{detalhe.curtida}}</span></div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div ng-if="produto.msg" class="card center">
+    <div class="card-content">
+        <h2 class ="msg">{{detalhe.msg}}</h2>
+    </div>
+  </div>
+  <div class="col s12 m4">
+    <div class="card desc">
+      <div class="card-image">
+        <img  materialboxed class="materialboxed responsive-img" src="assests/img/sem-imagem.jpg">
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m4">
+    <div class="card desc">
+      <div class="card-image">
+        <img materialboxed class="materialboxed responsive-img" src="assests/img/sem-imagem.jpg">
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m4">
+    <div class="card desc">
+      <div class="card-image">
+        <img materialboxed class="materialboxed responsive-img" src="assests/img/sem-imagem.jpg">
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m4">
+    <div class="card desc">
+      <div class="card-image">
+        <img materialboxed class="materialboxed responsive-img" src="assests/img/sem-imagem.jpg">
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m4">
+    <div class="card desc">
+      <div class="card-image">
+        <img materialboxed class="materialboxed responsive-img" src="assests/img/sem-imagem.jpg">
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m4">
+    <div class="card desc">
+      <div class="card-image">
+        <img materialboxed class="materialboxed responsive-img" src="assests/img/sem-imagem.jpg">
+      </div>
+    </div>
   </div>
 </div>

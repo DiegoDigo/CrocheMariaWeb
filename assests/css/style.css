@@ -8,13 +8,24 @@ body{
   min-height: 100vh;
   flex-direction: column;
 }
-
+.desc:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.caixa{
+  padding: 8px;
+}
 main {
   flex: 1 0 auto;
+}
+a.curtir {
+  cursor: pointer;
 }
 
 div.espasamento {
   margin-top: 60px;
+}
+div.space{
+  margin-top: 20px;
 }
 nav {
   height: 75px;
