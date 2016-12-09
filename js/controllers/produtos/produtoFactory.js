@@ -5,12 +5,12 @@ ProdutoFactory.$inject = ['$http','config','$q'];
 
 function ProdutoFactory($http,config , $q){
 
-  var url = config.host + "gelinho/";
+  var url = config.host;
 
   return {
       listar: function(){
         var promessa = $q.defer();
-        $http.get(url +'sabores/').then(function(result){
+        $http.get(url +'produtos/').then(function(result){
           var dados = [];
           angular.forEach(result.data , function(dado){
             dados.push(dado);
@@ -21,7 +21,11 @@ function ProdutoFactory($http,config , $q){
       },
 
       buscar : function(id){
-        return $http.get(url +"sabor/"+id+"/");
+        return $http.get(url +"produto/"+id+"/");
+      },
+
+      buscarPorCategoria : function(id){
+        return $http.get(url +"produto/categoria/"+id+"/");
       }
   }
 }

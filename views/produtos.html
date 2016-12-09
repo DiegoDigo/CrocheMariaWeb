@@ -9,19 +9,19 @@
 </div>
 
 <div class="row">
-  <div class="col s12 m4" ng-repeat="gelinhos in produto.teste">
+  <div class="col s12 m4" ng-repeat="produto in produto.produtos">
     <div class="card medium z-depth-4" >
         <div class="card-image">
-            <img ng-if = "gelinhos.imagen" ng-src="{{gelinhos.imagen}}" class="responsive-img">
-            <img ng-if = "!gelinhos.imagen" src="assests/img/sem-imagem.jpg" class="responsive-img">
-            <span class="card-title">{{gelinhos.sabor}}</span>
+            <img ng-if = "produto.imagem" ng-src="{{produto.imagem}}" class="responsive-img">
+            <img ng-if = "!produto.imagem" src="assests/img/sem-imagem.jpg" class="responsive-img">
+            <span class="card-title">{{produto.produto}}</span>
         </div>
         <div class="card-content">
-            <p><h4 class="center">{{gelinhos.tipoGelinho.tipo}}</h4></p>
-            <p><h5 class="center">{{gelinhos.valor_uni|currency: 'R$'}}</h5></p>
+            <p><h4 class="center">{{produto.categoria.categoria}}</h4></p>
+            <p><h5 class="center">{{produto.preco|currency: 'R$'}}</h5></p>
         </div>
         <div class="card-action">
-            <a class="btn" ng-if="gelinhos.valor_uni" ng-href="#/produtos/{{gelinhos.id}}">Comprar</a>
+            <a class="btn" ng-if="produto.preco" ng-href="#/produtos/{{produto.id}}">Comprar</a>
             <div class="right">
                 <a class="btn-floating center">+</a>
             </div>

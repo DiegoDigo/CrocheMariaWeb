@@ -1,0 +1,31 @@
+<div class="title">
+  <h2>{{categoria.title}}</h2>
+</div>
+
+<div ng-if="categoria.msg" class="card center">
+  <div class="card-content">
+      <h2 class ="msg">{{categorias.msg}}</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12 m4" ng-repeat="produtos in categorias.produtos">
+    <div class="card medium z-depth-4" >
+        <div class="card-image">
+            <img ng-if = "produtos.imagem" ng-src="{{produtos.imagem}}" class="responsive-img">
+            <img ng-if = "!produtos.imagem" src="assests/img/sem-imagem.jpg" class="responsive-img">
+            <span class="card-title">{{produtos.categoria}}</span>
+        </div>
+        <div class="card-content">
+            <p><h4 class="center">{{produtos.categoria.categoria}}</h4></p>
+            <p><h5 class="center">{{produtos.preco|currency: 'R$'}}</h5></p>
+        </div>
+        <div class="card-action">
+            <a class="btn" ng-if="produtos.preco" ng-href="#/produtos/{{produtos.id}}">Comprar</a>
+            <div class="right">
+                <a class="btn-floating center">+</a>
+            </div>
+
+        </div>
+    </div>
+  </div>

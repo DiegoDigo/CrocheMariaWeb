@@ -1,14 +1,19 @@
 <div class="card">
   <div class="card-content">
     <div class="card-title">
-      <p><h3 class="center title">{{detalhe.teste.sabor}}</h3></p>
+      <p><h3 class="center title">{{detalhe.produto.produto}}</h3></p>
     </div>
-    <p><h5>{{detalhe.teste.tipoGelinho.tipo}}</h5></p>
-    <p>{{detalhe.teste.valor_uni}}</p>
-    <div class="space">
-        <button type="button" class="btn">Compar</button>
-        <div class="right caixa"><a class="curtir"><i class="material-icons">queue</i></a></div>
-        <div class="right caixa"><a class="curtir"><i  ng-click="detalhe.curti()" class="material-icons">thumb_up</i></a><span ng-if="detalhe.curtida">{{detalhe.curtida}}</span></div>
+    <div class="container">
+      <p>{{detalhe.produto.descricao}}</p>
+      <p>{{detalhe.produto.preco|currency: 'R$ '}}</p>
+      <div class="space">
+        <a ng-href="#/produtos/categoria/{{detalhe.produto.categoria.id}}">{{detalhe.produto.categoria.categoria}}</a>
+      </div>
+      <div class="space">
+          <button type="button" class="btn">Compar</button>
+          <div class="right caixa"><a class="curtir"><i class="material-icons">queue</i></a></div>
+          <div class="right caixa"><a class="curtir"><i  ng-click="detalhe.curti()" class="material-icons">thumb_up</i></a><span ng-if="detalhe.curtida">{{detalhe.curtida}}</span></div>
+      </div>
     </div>
   </div>
 </div>

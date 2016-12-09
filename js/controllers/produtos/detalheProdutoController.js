@@ -6,13 +6,13 @@ DetalheProduto.$inject = ['produtoFactory' , '$routeParams'];
 function DetalheProduto(produtoFactory , $routeParams){
   var vim = this;
   var id = $routeParams.id;
-  vim.teste = [];
+  vim.produto = [];
   vim.msg = "";
   vim.curtida = 4;
 
-  var testeApi = function(){
+  var carregarProduto = function(){
     produtoFactory.buscar(id).then(function(response){
-      vim.teste = response.data;
+      vim.produto = response.data;
     }, function(error){
         vim.msg = "Não temos produtos cadastrado no momento";
     });
@@ -23,7 +23,7 @@ function DetalheProduto(produtoFactory , $routeParams){
   }
 
   var init = function(){
-    testeApi();
+    carregarProduto();
   };
 
   init();

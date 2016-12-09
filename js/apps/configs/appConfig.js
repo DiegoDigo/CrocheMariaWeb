@@ -31,6 +31,11 @@ function Config($routeProvider,$locationProvider){
       controller : 'perfilController',
       controllerAs : 'perfil',
   })
+  .when('/produtos/categoria/:categoria',{
+      templateUrl : 'views/produtoCategoria.html',
+      controller : 'produtoCategoriaController',
+      controllerAs : 'categorias',
+  })
   .otherwise({
       redirectTo: '/'
     });

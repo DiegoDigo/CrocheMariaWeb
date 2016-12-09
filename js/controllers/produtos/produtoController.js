@@ -5,14 +5,17 @@ Produto.$inject = ['produtoFactory'];
 
 function Produto(produtoFactory){
   var vim = this;
-  vim.teste = [];
+  vim.produtos = [];
   vim.title = "Nossos Produtos";
   vim.msg ="";
 
-  var testeApi = function(){
-    produtoFactory.listar().then(function(teste){
-      vim.teste = teste;
-      if(vim.teste.length === 0){
+  var carregarProdutos = function(){
+    produtoFactory.listar().then(function(produtos){
+      vim.produtos = produtos;
+      if(produtos.status === 0){
+        vim.msg = "Desculpe nos estamos fora de serviço em breve voltaremos";
+      }
+      if(vim.produtos.length === 0){
         vim.msg = "Não temos produtos cadastrado no momento";
       }
     },function(error){
@@ -21,7 +24,7 @@ function Produto(produtoFactory){
   };
 
   var init = function(){
-    testeApi();
+    carregarProdutos();
   };
 
   init();
